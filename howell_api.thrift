@@ -36,16 +36,16 @@ struct GetCpsRebateDiscountsResponse {
 }
 
 struct QueryCpsRebateDiscountsRequest {
-    1: optional list<string> EntityIdList,
+    1: optional list<string> entity_id_list,
 
-    99: required i32 PageIndex,
-    100: required i32 PageSize,
+    99: required i32 page_index,
+    100: required i32 page_size,
 }
 
 struct QueryCpsRebateDiscountsData {
-    1: optional list<models.CpsRebateDiscounts> ItemList
+    1: optional list<models.CpsRebateDiscounts> item_list
 
-    100: required models.Pagination Pagination
+    100: required models.Pagination pagination
 }
 
 struct QueryCpsRebateDiscountsResponse {
