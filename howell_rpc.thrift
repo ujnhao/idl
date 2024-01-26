@@ -27,6 +27,22 @@ struct MGetCpsRebateDiscountsResponse {
     255: base.BaseResp BaseResp, 
 }
 
+struct QueryCpsRebateDiscountsRequest {
+    1: optional list<string> EntityIdList,
+
+    99: required i32 PageIndex,
+    100: required i32 PageSize,
+
+    255: base.Base Base,
+}
+
+struct QueryCpsRebateDiscountsResponse {
+    1: optional list<models.CpsRebateDiscounts> ItemList
+
+    100: required models.Pagination Pagination
+    255: base.BaseResp BaseResp,
+}
+
 service HowellRpcService {
     CreateCpsRebateDiscountsResponse CreateCpsRebateDiscounts(1: CreateCpsRebateDiscountsRequest req)
     MGetCpsRebateDiscountsResponse MGetCpsRebateDiscounts(1: MGetCpsRebateDiscountsRequest req)
