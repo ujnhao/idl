@@ -56,7 +56,7 @@ struct QueryCpsRebateDiscountsResponse {
 }
 
 service HowellAPIService {
-    CreateCpsRebateDiscountsResponse CreateCpsRebateDiscounts(1: CreateCpsRebateDiscountsRequest req) (api.post="/api/cps_rebate_discounts/create");
-    GetCpsRebateDiscountsResponse GetCpsRebateDiscounts(1: GetCpsRebateDiscountsRequest req) (api.get="/api/cps_rebate_discounts/get");
-    QueryCpsRebateDiscountsResponse QueryCpsRebateDiscounts(1: QueryCpsRebateDiscountsRequest req)(api.post="/api/cps_rebate_discounts/query");
+    CreateCpsRebateDiscountsResponse CreateCpsRebateDiscounts(1: CreateCpsRebateDiscountsRequest req) (api.post="/api/howell/v1/cps_rebate_discounts/create");
+    GetCpsRebateDiscountsResponse GetCpsRebateDiscounts(1: GetCpsRebateDiscountsRequest req) (api.get="/api/howell/v1/cps_rebate_discounts/get");
+    QueryCpsRebateDiscountsResponse QueryCpsRebateDiscounts(1: QueryCpsRebateDiscountsRequest req)(api.post="/api/howell/v1/cps_rebate_discounts/query");
 }
