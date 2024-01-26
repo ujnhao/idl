@@ -35,7 +35,28 @@ struct GetCpsRebateDiscountsResponse {
     101: string message
 }
 
+struct QueryCpsRebateDiscountsRequest {
+    1: optional list<string> EntityIdList,
+
+    99: required i32 PageIndex,
+    100: required i32 PageSize,
+}
+
+struct QueryCpsRebateDiscountsData {
+    1: optional list<models.CpsRebateDiscounts> ItemList
+
+    100: required models.Pagination Pagination
+}
+
+struct QueryCpsRebateDiscountsResponse {
+    1: optional QueryCpsRebateDiscountsData data
+
+    100: i32 status
+    101: string message
+}
+
 service HowellAPIService {
     CreateCpsRebateDiscountsResponse CreateCpsRebateDiscounts(1: CreateCpsRebateDiscountsRequest req) (api.post="/api/cps_rebate_discounts/create");
     GetCpsRebateDiscountsResponse GetCpsRebateDiscounts(1: GetCpsRebateDiscountsRequest req) (api.get="/api/cps_rebate_discounts/get");
+    QueryCpsRebateDiscountsResponse QueryCpsRebateDiscounts(1: QueryCpsRebateDiscountsRequest req)(api.post="/api/cps_rebate_discounts/query");
 }
