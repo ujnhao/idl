@@ -1,13 +1,15 @@
 
 typedef string CpsType
-const CpsType Unknow = "unknown" // 未知
-const CpsType MeiTuan = "meituan" // 美团
+const CpsType CpsUnknow = "unknown" // 未知
+const CpsType CpsMeiTuan = "meituan" // 美团
+const CpsType CpsDiDi = "meituan" // 美团
+
 
 
 typedef string ActType
-const ActType Unkonw = "unknown" // 未知
-const ActType MiniProgram = "miniProgram" // 微信小程序
-const ActType H5 = "h5" // H5
+const ActType ActUnkonw = "unknown" // 未知
+const ActType ActMiniProgram = "miniProgram" // 微信小程序
+const ActType ActH5 = "h5" // H5
 
 enum Status {
     Valid = 0
