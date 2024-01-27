@@ -2,7 +2,7 @@
 typedef string CpsType
 const CpsType CpsUnknow = "unknown" // 未知
 const CpsType CpsMeiTuan = "meituan" // 美团
-const CpsType CpsDiDi = "meituan" // 美团
+const CpsType CpsDiDi = "didi" // 美团
 
 
 
