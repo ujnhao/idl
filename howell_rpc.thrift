@@ -1,5 +1,6 @@
 include "base.thrift"
 include "models.thrift"
+include "common.thrift"
 namespace go coder.hao.howell_rpc 
 
 
@@ -39,7 +40,7 @@ struct QueryCpsRebateDiscountsRequest {
 struct QueryCpsRebateDiscountsResponse {
     1: optional list<models.CpsRebateDiscounts> ItemList
 
-    100: required models.Pagination Pagination
+    100: required common.Pagination Pagination
     255: base.BaseResp BaseResp,
 }
 
