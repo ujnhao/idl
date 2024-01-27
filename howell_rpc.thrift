@@ -16,6 +16,18 @@ struct CreateCpsRebateDiscountsResponse {
     255: base.BaseResp BaseResp, 
 }
 
+struct UpdateCpsRebateDiscountsRequest {
+    1: required string EntityId,
+    2: required models.CpsRebateDiscounts CRDEntity,
+
+    255: base.Base Base,
+}
+
+struct UpdateCpsRebateDiscountsResponse {
+
+    255: base.BaseResp BaseResp,
+}
+
 struct MGetCpsRebateDiscountsRequest {
     1: required list<string> EntityIdList, 
 
@@ -46,6 +58,7 @@ struct QueryCpsRebateDiscountsResponse {
 
 service HowellRpcService {
     CreateCpsRebateDiscountsResponse CreateCpsRebateDiscounts(1: CreateCpsRebateDiscountsRequest req)
+    UpdateCpsRebateDiscountsResponse UpdateCpsRebateDiscounts(1: UpdateCpsRebateDiscountsRequest req)
     MGetCpsRebateDiscountsResponse MGetCpsRebateDiscounts(1: MGetCpsRebateDiscountsRequest req)
     QueryCpsRebateDiscountsResponse QueryCpsRebateDiscounts(1: QueryCpsRebateDiscountsRequest req)
 }

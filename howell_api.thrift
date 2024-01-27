@@ -18,6 +18,17 @@ struct CreateCpsRebateDiscountsResponse {
     101: string message
 }
 
+struct UpdateCpsRebateDiscountsRequest {
+    1: required string entity_id
+    2: required models.CpsRebateDiscounts crd_entity
+}
+
+struct UpdateCpsRebateDiscountsResponse {
+
+    100: i32 status
+    101: string message
+}
+
 struct GetCpsRebateDiscountsRequest {
     1: required string entity_id
 }
@@ -58,6 +69,7 @@ struct QueryCpsRebateDiscountsResponse {
 
 service HowellAPIService {
     CreateCpsRebateDiscountsResponse CreateCpsRebateDiscounts(1: CreateCpsRebateDiscountsRequest req) (api.post="/api/howell/v1/cps_rebate_discounts/create");
+    UpdateCpsRebateDiscountsResponse UpdateCpsRebateDiscounts(1: UpdateCpsRebateDiscountsRequest req) (api.post="/api/howell/v1/cps_rebate_discounts/update");
     GetCpsRebateDiscountsResponse GetCpsRebateDiscounts(1: GetCpsRebateDiscountsRequest req) (api.get="/api/howell/v1/cps_rebate_discounts/get");
     QueryCpsRebateDiscountsResponse QueryCpsRebateDiscounts(1: QueryCpsRebateDiscountsRequest req)(api.post="/api/howell/v1/cps_rebate_discounts/query");
 }
