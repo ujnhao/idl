@@ -42,6 +42,9 @@ struct MGetCpsRebateDiscountsResponse {
 
 struct QueryCpsRebateDiscountsRequest {
     1: optional list<string> EntityIdList,
+    2: optional list<string> ResourceList,
+    3: optional list<common.ActType> ActTypeList,
+    4: optional list<common.CpsType> CpsTypeList,
 
     99: required i32 PageIndex,
     100: required i32 PageSize,

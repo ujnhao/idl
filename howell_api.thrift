@@ -49,6 +49,9 @@ struct GetCpsRebateDiscountsResponse {
 
 struct QueryCpsRebateDiscountsRequest {
     1: optional list<string> entity_id_list,
+    2: optional list<string> resource_list,
+    3: optional list<common.ActType> act_type_list,
+    4: optional list<common.CpsType> cps_type_list,
 
     99: required i32 page_index,
     100: required i32 page_size,
